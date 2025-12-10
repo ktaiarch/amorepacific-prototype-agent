@@ -1,0 +1,2564 @@
+[
+  {
+    "id": "RM001",
+    "raw_material_code": "RM001",
+    "korean_name": "글리세린",
+    "english_name": "Glycerin",
+    "inci_name": "GLYCERIN",
+    "cas_no": "56-81-5",
+    "components": [
+      {
+        "component_name": "Glycerin",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Glycerin",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-1-01",
+    "supplier": "삼성정밀화학",
+    "material_type": "보습제",
+    "order_history": [
+      {
+        "order_date": "2024-03-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 500.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-06-20T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 300.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-11-10T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 200.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-03-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC100",
+        "product_name": "수분크림 베이직",
+        "percentage": 5.0
+      },
+      {
+        "product_code": "LC200",
+        "product_name": "에센스 라이트",
+        "percentage": 3.0
+      }
+    ],
+    "description": "글리세린은 무색 무취의 점성 액체로, 뛰어난 보습력을 가진 대표적인 보습제입니다. 피부 수분을 유지하고 촉촉함을 제공합니다."
+  },
+  {
+    "id": "RM002",
+    "raw_material_code": "RM002",
+    "korean_name": "세테아릴알코올",
+    "english_name": "Cetearyl Alcohol",
+    "inci_name": "CETEARYL ALCOHOL",
+    "cas_no": "67762-27-0",
+    "components": [
+      {
+        "component_name": "Cetyl Alcohol",
+        "percentage": 50.0
+      },
+      {
+        "component_name": "Stearyl Alcohol",
+        "percentage": 50.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Cetyl Alcohol",
+    "main_component_percentage": 50.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-2-03",
+    "supplier": "BASF",
+    "material_type": "유화제",
+    "order_history": [
+      {
+        "order_date": "2024-05-20T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 100.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-09-15T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 80.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-05-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC150",
+        "product_name": "영양크림 리치",
+        "percentage": 4.0
+      }
+    ],
+    "description": "세테아릴알코올은 세틸알코올과 스테아릴알코올의 혼합물로, 유화안정제 및 점도조절제로 사용됩니다. 크림과 로션에 부드러운 질감을 부여합니다."
+  },
+  {
+    "id": "RM003",
+    "raw_material_code": "RM003",
+    "korean_name": "녹차추출물",
+    "english_name": "Green Tea Extract",
+    "inci_name": "CAMELLIA SINENSIS LEAF EXTRACT",
+    "cas_no": "84650-60-2",
+    "components": [
+      {
+        "component_name": "EGCG",
+        "percentage": 45.0
+      },
+      {
+        "component_name": "Catechin",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Other polyphenols",
+        "percentage": 25.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "EGCG",
+    "main_component_percentage": 45.0,
+    "indicator_component": "EGCG (에피갈로카테킨갈레이트)",
+    "indicator_info": "항산화 효과의 지표성분, 최소 함량 40% 이상 권장",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-1-05",
+    "supplier": "한국콜마",
+    "material_type": "추출물",
+    "order_history": [
+      {
+        "order_date": "2024-07-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 50.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-05T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 30.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-08-20T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 20.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-07-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK300",
+        "product_name": "그린티 토너",
+        "percentage": 2.0
+      },
+      {
+        "product_code": "SK310",
+        "product_name": "그린티 세럼",
+        "percentage": 5.0
+      }
+    ],
+    "description": "녹차추출물은 카멜리아 시넨시스 잎에서 추출한 성분으로, EGCG를 포함한 폴리페놀이 풍부합니다. 항산화, 항염, 피부 진정 효과가 있습니다."
+  },
+  {
+    "id": "RM004",
+    "raw_material_code": "RM004",
+    "korean_name": "머크 펄 실버화이트",
+    "english_name": "Merck Pearl Silver White",
+    "inci_name": "MICA, TITANIUM DIOXIDE",
+    "cas_no": "12001-26-2",
+    "components": [
+      {
+        "component_name": "Mica",
+        "percentage": 70.0
+      },
+      {
+        "component_name": "Titanium Dioxide",
+        "percentage": 30.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Mica",
+    "main_component_percentage": 70.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "검토중",
+    "department": "색조연구팀",
+    "manager": "박색조",
+    "storage_location": "C-3-02",
+    "supplier": "머크",
+    "material_type": "펄",
+    "order_history": [
+      {
+        "order_date": "2023-04-15T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-01-20T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2021-06-10T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2020-09-05T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 8.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2023-04-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC383",
+        "product_name": "컬러 립스틱 383호",
+        "percentage": 3.5
+      },
+      {
+        "product_code": "ES500",
+        "product_name": "아이섀도우 팔레트",
+        "percentage": 8.0
+      }
+    ],
+    "description": "머크 펄 실버화이트는 운모와 이산화티타늄을 코팅한 펄 안료입니다. 은백색의 고급스러운 광택을 제공하며 색조 화장품에 널리 사용됩니다."
+  },
+  {
+    "id": "RM005",
+    "raw_material_code": "RM005",
+    "korean_name": "히알루론산",
+    "english_name": "Hyaluronic Acid",
+    "inci_name": "SODIUM HYALURONATE",
+    "cas_no": "9067-32-7",
+    "components": [
+      {
+        "component_name": "Sodium Hyaluronate",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Sodium Hyaluronate",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "승인대기",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-1-10",
+    "supplier": "화진화학",
+    "material_type": "보습제",
+    "order_history": [
+      {
+        "order_date": "2024-10-01T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-01-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 8.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-05-20T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 5.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-10-01T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC100",
+        "product_name": "수분크림 베이직",
+        "percentage": 0.5
+      },
+      {
+        "product_code": "SK350",
+        "product_name": "히알루론 앰플",
+        "percentage": 2.0
+      }
+    ],
+    "description": "히알루론산(소듐히알루로네이트)은 자체 무게의 1000배 이상의 수분을 흡수할 수 있는 강력한 보습 성분입니다. 피부 수분 공급과 탄력 개선에 효과적입니다."
+  },
+  {
+    "id": "RM006",
+    "raw_material_code": "RM006",
+    "korean_name": "카본블랙",
+    "english_name": "Carbon Black",
+    "inci_name": "CI 77266",
+    "cas_no": "1333-86-4",
+    "components": [
+      {
+        "component_name": "Carbon Black",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Carbon Black",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "색조연구팀",
+    "manager": "박색조",
+    "storage_location": "C-2-01",
+    "supplier": "머크",
+    "material_type": "색소",
+    "order_history": [
+      {
+        "order_date": "2024-08-20T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 5.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-11-10T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 3.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC383",
+        "product_name": "컬러 립스틱 383호",
+        "percentage": 2.5
+      },
+      {
+        "product_code": "EL100",
+        "product_name": "아이라이너 블랙",
+        "percentage": 15.0
+      }
+    ],
+    "description": "카본블랙은 순수한 검정색 색소로, 아이라이너, 마스카라, 립스틱 등 색조 화장품에 사용됩니다. 높은 착색력과 안정성을 제공합니다."
+  },
+  {
+    "id": "RM007",
+    "raw_material_code": "RM007",
+    "korean_name": "알로에베라추출물",
+    "english_name": "Aloe Vera Extract",
+    "inci_name": "ALOE BARBADENSIS LEAF EXTRACT",
+    "cas_no": "85507-69-3",
+    "components": [
+      {
+        "component_name": "Aloin",
+        "percentage": 15.0
+      },
+      {
+        "component_name": "Polysaccharides",
+        "percentage": 60.0
+      },
+      {
+        "component_name": "Other compounds",
+        "percentage": 25.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Polysaccharides",
+    "main_component_percentage": 60.0,
+    "indicator_component": "Aloin (알로인)",
+    "indicator_info": "진정 효과 지표성분, 함량 10-20% 범위 권장",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-2-03",
+    "supplier": "코스맥스",
+    "material_type": "추출물",
+    "order_history": [
+      {
+        "order_date": "2024-06-15T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 40.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-09-20T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 25.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-06-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK400",
+        "product_name": "알로에 수딩젤",
+        "percentage": 10.0
+      },
+      {
+        "product_code": "SN100",
+        "product_name": "선크림 데일리",
+        "percentage": 1.5
+      }
+    ],
+    "description": "알로에베라추출물은 알로에 잎에서 추출한 성분으로, 뛰어난 진정 및 보습 효과가 있습니다. 자극받은 피부를 진정시키고 수분을 공급합니다."
+  },
+  {
+    "id": "RM008",
+    "raw_material_code": "RM008",
+    "korean_name": "티타늄디옥사이드",
+    "english_name": "Titanium Dioxide",
+    "inci_name": "TITANIUM DIOXIDE",
+    "cas_no": "13463-67-7",
+    "components": [
+      {
+        "component_name": "Titanium Dioxide",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Titanium Dioxide",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "선케어연구팀",
+    "manager": "정선케어",
+    "storage_location": "D-1-01",
+    "supplier": "BASF",
+    "material_type": "자외선차단제",
+    "order_history": [
+      {
+        "order_date": "2024-04-10T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 200.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-08-25T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 150.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-12-15T09:00:00Z",
+        "manager": "한자외선",
+        "quantity": 100.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-04-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SN100",
+        "product_name": "선크림 데일리",
+        "percentage": 8.0
+      },
+      {
+        "product_code": "SN200",
+        "product_name": "선스틱 SPF50",
+        "percentage": 12.0
+      }
+    ],
+    "description": "티타늄디옥사이드는 물리적 자외선 차단제로 사용되는 무기 성분입니다. UVA/UVB를 반사하여 피부를 보호하며, 백탁 현상이 있을 수 있습니다."
+  },
+  {
+    "id": "RM009",
+    "raw_material_code": "RM009",
+    "korean_name": "소듐라우릴설페이트",
+    "english_name": "Sodium Lauryl Sulfate",
+    "inci_name": "SODIUM LAURYL SULFATE",
+    "cas_no": "151-21-3",
+    "components": [
+      {
+        "component_name": "Sodium Lauryl Sulfate",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Sodium Lauryl Sulfate",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "미등록",
+    "department": "헤어연구팀",
+    "manager": "강헤어",
+    "storage_location": "E-1-02",
+    "supplier": "삼성정밀화학",
+    "material_type": "계면활성제",
+    "order_history": [],
+    "last_order_date": null,
+    "product_usage": [],
+    "description": "소듐라우릴설페이트(SLS)는 음이온 계면활성제로, 강력한 세정력과 거품력을 제공합니다. 샴푸, 바디워시 등 클렌징 제품에 사용됩니다."
+  },
+  {
+    "id": "RM010",
+    "raw_material_code": "RM010",
+    "korean_name": "머크 펄 골드",
+    "english_name": "Merck Pearl Gold",
+    "inci_name": "MICA, IRON OXIDES",
+    "cas_no": "12001-26-2",
+    "components": [
+      {
+        "component_name": "Mica",
+        "percentage": 65.0
+      },
+      {
+        "component_name": "Iron Oxides",
+        "percentage": 35.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Mica",
+    "main_component_percentage": 65.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "색조연구팀",
+    "manager": "김펄",
+    "storage_location": "C-3-05",
+    "supplier": "머크",
+    "material_type": "펄",
+    "order_history": [
+      {
+        "order_date": "2024-02-28T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 25.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-07-15T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-03-10T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2021-08-20T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 12.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2020-11-05T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 10.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-02-28T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "ES500",
+        "product_name": "아이섀도우 팔레트",
+        "percentage": 12.0
+      },
+      {
+        "product_code": "HL100",
+        "product_name": "하이라이터 골드",
+        "percentage": 25.0
+      }
+    ],
+    "description": "머크 펄 골드는 운모와 산화철을 코팅한 금색 펄 안료입니다. 화려한 금빛 광택을 제공하며 아이섀도우, 하이라이터 등에 사용됩니다."
+  },
+  {
+    "id": "RM011",
+    "raw_material_code": "RM011",
+    "korean_name": "나이아신아마이드",
+    "english_name": "Niacinamide",
+    "inci_name": "NIACINAMIDE",
+    "cas_no": "98-92-0",
+    "components": [
+      {
+        "component_name": "Niacinamide",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Niacinamide",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-3-01",
+    "supplier": "DSM",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-09-05T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 30.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-03-20T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 25.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-10T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 20.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-09-05T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK500",
+        "product_name": "브라이트닝 세럼",
+        "percentage": 5.0
+      },
+      {
+        "product_code": "LC250",
+        "product_name": "톤업 크림",
+        "percentage": 3.0
+      }
+    ],
+    "description": "나이아신아마이드(비타민B3)는 미백, 주름개선, 피지조절 등 다양한 효능을 가진 기능성 원료입니다. 피부 장벽 강화와 톤 개선에 효과적입니다."
+  },
+  {
+    "id": "RM012",
+    "raw_material_code": "RM012",
+    "korean_name": "페녹시에탄올",
+    "english_name": "Phenoxyethanol",
+    "inci_name": "PHENOXYETHANOL",
+    "cas_no": "122-99-6",
+    "components": [
+      {
+        "component_name": "Phenoxyethanol",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Phenoxyethanol",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-4-02",
+    "supplier": "클라리언트",
+    "material_type": "방부제",
+    "order_history": [
+      {
+        "order_date": "2024-07-25T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 50.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-20T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 40.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-07-25T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC100",
+        "product_name": "수분크림 베이직",
+        "percentage": 0.8
+      },
+      {
+        "product_code": "SK300",
+        "product_name": "그린티 토너",
+        "percentage": 0.5
+      }
+    ],
+    "description": "페녹시에탄올은 파라벤 대체 방부제로 널리 사용됩니다. 광범위한 항균 활성을 가지며 화장품의 미생물 오염을 방지합니다."
+  },
+  {
+    "id": "RM013",
+    "raw_material_code": "RM013",
+    "korean_name": "식물성 스쿠알란",
+    "english_name": "Vegetable Squalane",
+    "inci_name": "SQUALANE",
+    "cas_no": "111-01-3",
+    "components": [
+      {
+        "component_name": "Squalane",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Squalane",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "검토중",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-3-01",
+    "supplier": "아모레퍼시픽",
+    "material_type": "보습제",
+    "order_history": [
+      {
+        "order_date": "2024-01-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 30.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-01-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC300",
+        "product_name": "오일 세럼",
+        "percentage": 15.0
+      }
+    ],
+    "description": "식물성 스쿠알란은 올리브 또는 사탕수수에서 추출한 에몰리언트 오일입니다. 피부 친화성이 높고 가벼운 사용감으로 보습과 피부 장벽 보호에 효과적입니다."
+  },
+  {
+    "id": "RM014",
+    "raw_material_code": "RM014",
+    "korean_name": "징크옥사이드",
+    "english_name": "Zinc Oxide",
+    "inci_name": "ZINC OXIDE",
+    "cas_no": "1314-13-2",
+    "components": [
+      {
+        "component_name": "Zinc Oxide",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Zinc Oxide",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "승인대기",
+    "department": "선케어연구팀",
+    "manager": "정선케어",
+    "storage_location": "D-1-05",
+    "supplier": "BASF",
+    "material_type": "자외선차단제",
+    "order_history": [
+      {
+        "order_date": "2024-11-01T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 80.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-11-01T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SN300",
+        "product_name": "민감성 선크림",
+        "percentage": 15.0
+      }
+    ],
+    "description": "징크옥사이드는 물리적 자외선 차단제로 UVA/UVB를 광범위하게 차단합니다. 민감성 피부에도 사용 가능하며 진정 효과도 있습니다."
+  },
+  {
+    "id": "RM015",
+    "raw_material_code": "RM015",
+    "korean_name": "머크 펄 핑크",
+    "english_name": "Merck Pearl Pink",
+    "inci_name": "MICA, TITANIUM DIOXIDE, IRON OXIDES",
+    "cas_no": "12001-26-2",
+    "components": [
+      {
+        "component_name": "Mica",
+        "percentage": 60.0
+      },
+      {
+        "component_name": "Titanium Dioxide",
+        "percentage": 25.0
+      },
+      {
+        "component_name": "Iron Oxides",
+        "percentage": 15.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Mica",
+    "main_component_percentage": 60.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "색조연구팀",
+    "manager": "김펄",
+    "storage_location": "C-3-08",
+    "supplier": "머크",
+    "material_type": "펄",
+    "order_history": [
+      {
+        "order_date": "2024-05-15T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 18.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-25T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-06-10T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 12.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2021-01-20T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2020-05-15T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 8.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-05-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "BL200",
+        "product_name": "블러셔 핑크",
+        "percentage": 20.0
+      },
+      {
+        "product_code": "LC400",
+        "product_name": "립글로스 체리",
+        "percentage": 5.0
+      }
+    ],
+    "description": "머크 펄 핑크는 운모, 이산화티타늄, 산화철로 코팅된 핑크색 펄 안료입니다. 부드럽고 화사한 핑크빛 광택을 제공하며 블러셔, 립 제품에 사용됩니다."
+  },
+  {
+    "id": "RM016",
+    "raw_material_code": "RM016",
+    "korean_name": "세라마이드NP",
+    "english_name": "Ceramide NP",
+    "inci_name": "CERAMIDE NP",
+    "cas_no": "100403-19-8",
+    "components": [
+      {
+        "component_name": "Ceramide NP",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Ceramide NP",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-1-15",
+    "supplier": "에보닉",
+    "material_type": "보습제",
+    "order_history": [
+      {
+        "order_date": "2024-08-10T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 5.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-02-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 3.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC350",
+        "product_name": "장벽크림 리페어",
+        "percentage": 0.5
+      },
+      {
+        "product_code": "SK600",
+        "product_name": "세라마이드 토너",
+        "percentage": 0.2
+      }
+    ],
+    "description": "세라마이드NP는 피부 장벽의 핵심 구성 성분으로, 피부 장벽 기능을 강화하고 수분 손실을 방지합니다. 건조하고 민감한 피부에 효과적입니다."
+  },
+  {
+    "id": "RM017",
+    "raw_material_code": "RM017",
+    "korean_name": "레티놀",
+    "english_name": "Retinol",
+    "inci_name": "RETINOL",
+    "cas_no": "68-26-8",
+    "components": [
+      {
+        "component_name": "Retinol",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Retinol",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "검토중",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-01",
+    "supplier": "DSM",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-06-01T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 2.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-06-01T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK700",
+        "product_name": "레티놀 세럼",
+        "percentage": 0.3
+      }
+    ],
+    "description": "레티놀(비타민A)은 피부 재생을 촉진하고 주름 개선, 피부 탄력 증가에 효과적인 대표적인 안티에이징 성분입니다. 광안정성이 낮아 특수 포장이 필요합니다."
+  },
+  {
+    "id": "RM018",
+    "raw_material_code": "RM018",
+    "korean_name": "아스코빅애씨드",
+    "english_name": "Ascorbic Acid",
+    "inci_name": "ASCORBIC ACID",
+    "cas_no": "50-81-7",
+    "components": [
+      {
+        "component_name": "Ascorbic Acid",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Ascorbic Acid",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-03",
+    "supplier": "DSM",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-09-20T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-04-05T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-11-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 8.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-09-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK800",
+        "product_name": "비타민C 세럼",
+        "percentage": 10.0
+      },
+      {
+        "product_code": "LC250",
+        "product_name": "톤업 크림",
+        "percentage": 2.0
+      }
+    ],
+    "description": "아스코빅애씨드(비타민C)는 강력한 항산화제로 미백, 콜라겐 합성 촉진, 피부 톤 개선에 효과적입니다. 산화에 민감하여 안정화 처리가 필요합니다."
+  },
+  {
+    "id": "RM019",
+    "raw_material_code": "RM019",
+    "korean_name": "코코베타인",
+    "english_name": "Cocamidopropyl Betaine",
+    "inci_name": "COCAMIDOPROPYL BETAINE",
+    "cas_no": "61789-40-0",
+    "components": [
+      {
+        "component_name": "Cocamidopropyl Betaine",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Cocamidopropyl Betaine",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "헤어연구팀",
+    "manager": "강헤어",
+    "storage_location": "E-2-01",
+    "supplier": "삼성정밀화학",
+    "material_type": "계면활성제",
+    "order_history": [
+      {
+        "order_date": "2024-07-05T09:00:00Z",
+        "manager": "강헤어",
+        "quantity": 200.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-01-20T09:00:00Z",
+        "manager": "강헤어",
+        "quantity": 150.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-06-10T09:00:00Z",
+        "manager": "오클린",
+        "quantity": 100.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-07-05T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "HP100",
+        "product_name": "데일리 샴푸",
+        "percentage": 8.0
+      },
+      {
+        "product_code": "BW100",
+        "product_name": "버블 바디워시",
+        "percentage": 6.0
+      }
+    ],
+    "description": "코코베타인은 코코넛 오일에서 유래한 양쪽성 계면활성제로, 부드럽고 풍부한 거품을 제공합니다. 저자극성으로 민감성 피부와 아기용 제품에도 적합합니다."
+  },
+  {
+    "id": "RM020",
+    "raw_material_code": "RM020",
+    "korean_name": "디메치콘",
+    "english_name": "Dimethicone",
+    "inci_name": "DIMETHICONE",
+    "cas_no": "9006-65-9",
+    "components": [
+      {
+        "component_name": "Dimethicone",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Dimethicone",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-6-02",
+    "supplier": "다우케미칼",
+    "material_type": "실리콘",
+    "order_history": [
+      {
+        "order_date": "2024-10-15T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 100.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-05-10T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 80.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-01T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 60.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-10-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC100",
+        "product_name": "수분크림 베이직",
+        "percentage": 2.0
+      },
+      {
+        "product_code": "HP200",
+        "product_name": "헤어 에센스",
+        "percentage": 5.0
+      },
+      {
+        "product_code": "MK100",
+        "product_name": "메이크업 베이스",
+        "percentage": 8.0
+      }
+    ],
+    "description": "디메치콘은 실리콘 계열 성분으로 피부에 부드러운 실키 감촉을 제공합니다. 보호막을 형성하여 수분 증발을 막고 제품의 발림성을 개선합니다."
+  },
+  {
+    "id": "RM021",
+    "raw_material_code": "RM021",
+    "korean_name": "로즈힙오일",
+    "english_name": "Rosehip Oil",
+    "inci_name": "ROSA CANINA FRUIT OIL",
+    "cas_no": "84603-93-0",
+    "components": [
+      {
+        "component_name": "Linoleic Acid",
+        "percentage": 45.0
+      },
+      {
+        "component_name": "Linolenic Acid",
+        "percentage": 35.0
+      },
+      {
+        "component_name": "Oleic Acid",
+        "percentage": 15.0
+      },
+      {
+        "component_name": "Other fatty acids",
+        "percentage": 5.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Linoleic Acid",
+    "main_component_percentage": 45.0,
+    "indicator_component": "Linolenic Acid (리놀렌산)",
+    "indicator_info": "피부 재생 효과 지표성분, 최소 30% 이상 권장",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-4-01",
+    "supplier": "한국콜마",
+    "material_type": "오일",
+    "order_history": [
+      {
+        "order_date": "2024-04-20T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-09-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 15.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-04-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC300",
+        "product_name": "오일 세럼",
+        "percentage": 10.0
+      },
+      {
+        "product_code": "FC100",
+        "product_name": "페이스 오일",
+        "percentage": 30.0
+      }
+    ],
+    "description": "로즈힙오일은 로즈힙 열매에서 추출한 식물성 오일로, 비타민A와 필수지방산이 풍부합니다. 피부 재생, 흉터 개선, 안티에이징에 효과적입니다."
+  },
+  {
+    "id": "RM022",
+    "raw_material_code": "RM022",
+    "korean_name": "판테놀",
+    "english_name": "Panthenol",
+    "inci_name": "PANTHENOL",
+    "cas_no": "81-13-0",
+    "components": [
+      {
+        "component_name": "D-Panthenol",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "D-Panthenol",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-3-05",
+    "supplier": "BASF",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-08-25T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 40.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-03-10T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 30.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-05T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 25.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-25T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK400",
+        "product_name": "알로에 수딩젤",
+        "percentage": 1.0
+      },
+      {
+        "product_code": "HP100",
+        "product_name": "데일리 샴푸",
+        "percentage": 0.5
+      },
+      {
+        "product_code": "LC350",
+        "product_name": "장벽크림 리페어",
+        "percentage": 2.0
+      }
+    ],
+    "description": "판테놀(프로비타민B5)은 피부와 모발에 수분을 공급하고 진정 효과가 있습니다. 피부 장벽 회복을 돕고 모발의 윤기와 탄력을 개선합니다."
+  },
+  {
+    "id": "RM023",
+    "raw_material_code": "RM023",
+    "korean_name": "아데노신",
+    "english_name": "Adenosine",
+    "inci_name": "ADENOSINE",
+    "cas_no": "58-61-7",
+    "components": [
+      {
+        "component_name": "Adenosine",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Adenosine",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "승인대기",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-05",
+    "supplier": "에보닉",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-11-10T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 3.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-11-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK900",
+        "product_name": "안티에이징 세럼",
+        "percentage": 0.04
+      }
+    ],
+    "description": "아데노신은 식약처 고시 주름개선 기능성 원료입니다. 콜라겐 합성을 촉진하고 피부 탄력을 개선하여 주름을 완화하는 효과가 있습니다."
+  },
+  {
+    "id": "RM024",
+    "raw_material_code": "RM024",
+    "korean_name": "토코페롤",
+    "english_name": "Tocopherol",
+    "inci_name": "TOCOPHEROL",
+    "cas_no": "59-02-9",
+    "components": [
+      {
+        "component_name": "Alpha-Tocopherol",
+        "percentage": 95.0
+      },
+      {
+        "component_name": "Other tocopherols",
+        "percentage": 5.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Alpha-Tocopherol",
+    "main_component_percentage": 95.0,
+    "indicator_component": "Alpha-Tocopherol",
+    "indicator_info": "항산화 효과 지표, 최소 90% 이상 권장",
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-4-05",
+    "supplier": "DSM",
+    "material_type": "산화방지제",
+    "order_history": [
+      {
+        "order_date": "2024-06-20T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-10T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-05-25T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 12.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-06-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC300",
+        "product_name": "오일 세럼",
+        "percentage": 0.5
+      },
+      {
+        "product_code": "FC100",
+        "product_name": "페이스 오일",
+        "percentage": 1.0
+      }
+    ],
+    "description": "토코페롤(비타민E)은 강력한 항산화제로 피부 노화를 방지하고 제품의 산화 안정성을 높입니다. 보습 효과도 있어 건조한 피부에 적합합니다."
+  },
+  {
+    "id": "RM025",
+    "raw_material_code": "RM025",
+    "korean_name": "센텔라아시아티카추출물",
+    "english_name": "Centella Asiatica Extract",
+    "inci_name": "CENTELLA ASIATICA EXTRACT",
+    "cas_no": "84696-21-9",
+    "components": [
+      {
+        "component_name": "Asiaticoside",
+        "percentage": 40.0
+      },
+      {
+        "component_name": "Madecassoside",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Asiatic Acid",
+        "percentage": 15.0
+      },
+      {
+        "component_name": "Madecassic Acid",
+        "percentage": 15.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Asiaticoside",
+    "main_component_percentage": 40.0,
+    "indicator_component": "Asiaticoside (아시아티코사이드)",
+    "indicator_info": "피부 재생 및 진정 효과 지표성분, 최소 35% 이상 권장",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-2-08",
+    "supplier": "코스맥스",
+    "material_type": "추출물",
+    "order_history": [
+      {
+        "order_date": "2024-09-15T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 30.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-04-01T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 25.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-20T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 20.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-09-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK950",
+        "product_name": "시카 크림",
+        "percentage": 5.0
+      },
+      {
+        "product_code": "SK960",
+        "product_name": "트러블 스팟",
+        "percentage": 3.0
+      }
+    ],
+    "description": "센텔라아시아티카(병풀)추출물은 아시아티코사이드를 포함한 트리테르페노이드 성분이 풍부합니다. 피부 진정, 재생, 상처 치유에 탁월한 효과가 있습니다."
+  },
+  {
+    "id": "RM026",
+    "raw_material_code": "RM026",
+    "korean_name": "머크 펄 블루",
+    "english_name": "Merck Pearl Blue",
+    "inci_name": "MICA, IRON OXIDES, FERRIC FERROCYANIDE",
+    "cas_no": "12001-26-2",
+    "components": [
+      {
+        "component_name": "Mica",
+        "percentage": 55.0
+      },
+      {
+        "component_name": "Iron Oxides",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Ferric Ferrocyanide",
+        "percentage": 15.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Mica",
+    "main_component_percentage": 55.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "색조연구팀",
+    "manager": "김펄",
+    "storage_location": "C-3-12",
+    "supplier": "머크",
+    "material_type": "펄",
+    "order_history": [
+      {
+        "order_date": "2024-03-20T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-08-10T09:00:00Z",
+        "manager": "김펄",
+        "quantity": 12.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2022-11-25T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2021-04-15T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 8.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2020-07-20T09:00:00Z",
+        "manager": "이광택",
+        "quantity": 6.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-03-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "ES500",
+        "product_name": "아이섀도우 팔레트",
+        "percentage": 10.0
+      },
+      {
+        "product_code": "EL200",
+        "product_name": "아이라이너 네이비",
+        "percentage": 5.0
+      }
+    ],
+    "description": "머크 펄 블루는 운모, 산화철, 감청으로 코팅된 블루 펄 안료입니다. 깊고 신비로운 푸른빛 광택을 제공하며 아이 메이크업 제품에 사용됩니다."
+  },
+  {
+    "id": "RM027",
+    "raw_material_code": "RM027",
+    "korean_name": "살리실릭애씨드",
+    "english_name": "Salicylic Acid",
+    "inci_name": "SALICYLIC ACID",
+    "cas_no": "69-72-7",
+    "components": [
+      {
+        "component_name": "Salicylic Acid",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Salicylic Acid",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-08",
+    "supplier": "클라리언트",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-05-25T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 10.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-11-30T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 8.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-05-25T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK960",
+        "product_name": "트러블 스팟",
+        "percentage": 2.0
+      },
+      {
+        "product_code": "CL100",
+        "product_name": "포어 클렌저",
+        "percentage": 0.5
+      }
+    ],
+    "description": "살리실릭애씨드(BHA)는 지용성 각질 제거제로 모공 깊숙이 침투하여 각질을 제거합니다. 여드름 피부와 모공 관리에 효과적이며 항염 효과도 있습니다."
+  },
+  {
+    "id": "RM028",
+    "raw_material_code": "RM028",
+    "korean_name": "카페인",
+    "english_name": "Caffeine",
+    "inci_name": "CAFFEINE",
+    "cas_no": "58-08-2",
+    "components": [
+      {
+        "component_name": "Caffeine",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Caffeine",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "검토중",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-6-05",
+    "supplier": "BASF",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-02-10T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 5.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-02-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "EC100",
+        "product_name": "아이크림 디퍼프",
+        "percentage": 3.0
+      }
+    ],
+    "description": "카페인은 혈관 수축 및 지방 분해 효과가 있어 눈가 붓기 완화와 셀룰라이트 관리에 사용됩니다. 항산화 효과도 있어 피부 보호에 도움이 됩니다."
+  },
+  {
+    "id": "RM029",
+    "raw_material_code": "RM029",
+    "korean_name": "글루타치온",
+    "english_name": "Glutathione",
+    "inci_name": "GLUTATHIONE",
+    "cas_no": "70-18-8",
+    "components": [
+      {
+        "component_name": "L-Glutathione",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "L-Glutathione",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "승인대기",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-5-10",
+    "supplier": "교와발효",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-10-20T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 1.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-10-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK1000",
+        "product_name": "글루타치온 앰플",
+        "percentage": 1.0
+      }
+    ],
+    "description": "글루타치온은 강력한 항산화 펩타이드로 미백과 피부 톤 개선에 효과적입니다. 멜라닌 생성을 억제하고 피부를 밝고 투명하게 만들어줍니다."
+  },
+  {
+    "id": "RM030",
+    "raw_material_code": "RM030",
+    "korean_name": "호호바오일",
+    "english_name": "Jojoba Oil",
+    "inci_name": "SIMMONDSIA CHINENSIS SEED OIL",
+    "cas_no": "61789-91-1",
+    "components": [
+      {
+        "component_name": "Eicosenoic Acid",
+        "percentage": 70.0
+      },
+      {
+        "component_name": "Erucic Acid",
+        "percentage": 15.0
+      },
+      {
+        "component_name": "Other fatty acids",
+        "percentage": 15.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Eicosenoic Acid",
+    "main_component_percentage": 70.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-4-05",
+    "supplier": "한국콜마",
+    "material_type": "오일",
+    "order_history": [
+      {
+        "order_date": "2024-08-05T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 30.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-02-20T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 25.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-07-10T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 20.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-05T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "FC100",
+        "product_name": "페이스 오일",
+        "percentage": 20.0
+      },
+      {
+        "product_code": "HP300",
+        "product_name": "헤어 오일",
+        "percentage": 15.0
+      }
+    ],
+    "description": "호호바오일은 호호바 씨앗에서 추출한 액상 왁스로, 피지와 유사한 구조를 가집니다. 피부와 모발에 우수한 보습력과 보호막을 제공합니다."
+  },
+  {
+    "id": "RM031",
+    "raw_material_code": "RM031",
+    "korean_name": "콜라겐",
+    "english_name": "Collagen",
+    "inci_name": "HYDROLYZED COLLAGEN",
+    "cas_no": "9007-34-5",
+    "components": [
+      {
+        "component_name": "Hydrolyzed Collagen",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Hydrolyzed Collagen",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-1-20",
+    "supplier": "니타젤라틴",
+    "material_type": "보습제",
+    "order_history": [
+      {
+        "order_date": "2024-07-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-01-25T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-08-05T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 12.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-07-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK900",
+        "product_name": "안티에이징 세럼",
+        "percentage": 2.0
+      },
+      {
+        "product_code": "LC400",
+        "product_name": "립글로스 체리",
+        "percentage": 1.0
+      }
+    ],
+    "description": "가수분해 콜라겐은 피부 탄력과 보습에 효과적인 단백질입니다. 분자량이 작아 피부 흡수가 용이하며 주름 개선과 피부 재생에 도움이 됩니다."
+  },
+  {
+    "id": "RM032",
+    "raw_material_code": "RM032",
+    "korean_name": "알부틴",
+    "english_name": "Arbutin",
+    "inci_name": "ARBUTIN",
+    "cas_no": "497-76-7",
+    "components": [
+      {
+        "component_name": "Beta-Arbutin",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Beta-Arbutin",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-12",
+    "supplier": "DSM",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-06-10T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 8.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-25T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 6.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-06-15T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 5.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-06-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK500",
+        "product_name": "브라이트닝 세럼",
+        "percentage": 2.0
+      },
+      {
+        "product_code": "LC250",
+        "product_name": "톤업 크림",
+        "percentage": 1.0
+      }
+    ],
+    "description": "알부틴은 식약처 고시 미백 기능성 원료로, 티로시나아제 활성을 억제하여 멜라닌 생성을 감소시킵니다. 하이드로퀴논보다 안전하고 순합니다."
+  },
+  {
+    "id": "RM033",
+    "raw_material_code": "RM033",
+    "korean_name": "아르간오일",
+    "english_name": "Argan Oil",
+    "inci_name": "ARGANIA SPINOSA KERNEL OIL",
+    "cas_no": "223747-87-3",
+    "components": [
+      {
+        "component_name": "Oleic Acid",
+        "percentage": 45.0
+      },
+      {
+        "component_name": "Linoleic Acid",
+        "percentage": 35.0
+      },
+      {
+        "component_name": "Palmitic Acid",
+        "percentage": 12.0
+      },
+      {
+        "component_name": "Other components",
+        "percentage": 8.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Oleic Acid",
+    "main_component_percentage": 45.0,
+    "indicator_component": "Vitamin E (토코페롤)",
+    "indicator_info": "항산화 및 영양 공급 지표, 높은 비타민E 함량 특징",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-4-08",
+    "supplier": "코스맥스",
+    "material_type": "오일",
+    "order_history": [
+      {
+        "order_date": "2024-09-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-03-25T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 12.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-09-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "HP300",
+        "product_name": "헤어 오일",
+        "percentage": 25.0
+      },
+      {
+        "product_code": "FC100",
+        "product_name": "페이스 오일",
+        "percentage": 15.0
+      }
+    ],
+    "description": "아르간오일은 모로코산 아르간 나무 열매에서 추출한 고급 오일입니다. 비타민E가 풍부하여 피부와 모발에 영양을 공급하고 탄력을 부여합니다."
+  },
+  {
+    "id": "RM034",
+    "raw_material_code": "RM034",
+    "korean_name": "에틸헥실메톡시신나메이트",
+    "english_name": "Ethylhexyl Methoxycinnamate",
+    "inci_name": "ETHYLHEXYL METHOXYCINNAMATE",
+    "cas_no": "5466-77-3",
+    "components": [
+      {
+        "component_name": "Octinoxate",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Octinoxate",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "선케어연구팀",
+    "manager": "정선케어",
+    "storage_location": "D-2-01",
+    "supplier": "BASF",
+    "material_type": "자외선차단제",
+    "order_history": [
+      {
+        "order_date": "2024-04-15T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 150.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-09-20T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 120.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-02-10T09:00:00Z",
+        "manager": "한자외선",
+        "quantity": 100.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-04-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SN100",
+        "product_name": "선크림 데일리",
+        "percentage": 7.5
+      },
+      {
+        "product_code": "SN200",
+        "product_name": "선스틱 SPF50",
+        "percentage": 6.0
+      }
+    ],
+    "description": "에틸헥실메톡시신나메이트(옥티녹세이트)는 UVB를 흡수하는 화학적 자외선 차단제입니다. 가벼운 사용감으로 데일리 선케어 제품에 널리 사용됩니다."
+  },
+  {
+    "id": "RM035",
+    "raw_material_code": "RM035",
+    "korean_name": "소듐코코일이세치오네이트",
+    "english_name": "Sodium Cocoyl Isethionate",
+    "inci_name": "SODIUM COCOYL ISETHIONATE",
+    "cas_no": "61789-32-0",
+    "components": [
+      {
+        "component_name": "Sodium Cocoyl Isethionate",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Sodium Cocoyl Isethionate",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "미등록",
+    "department": "헤어연구팀",
+    "manager": "강헤어",
+    "storage_location": "E-2-05",
+    "supplier": "클라리언트",
+    "material_type": "계면활성제",
+    "order_history": [],
+    "last_order_date": null,
+    "product_usage": [],
+    "description": "소듐코코일이세치오네이트(SCI)는 코코넛 유래 순한 계면활성제로, 크리미하고 풍성한 거품을 제공합니다. 고체 샴푸바와 클렌징 바에 주로 사용됩니다."
+  },
+  {
+    "id": "RM036",
+    "raw_material_code": "RM036",
+    "korean_name": "글리콜릭애씨드",
+    "english_name": "Glycolic Acid",
+    "inci_name": "GLYCOLIC ACID",
+    "cas_no": "79-14-1",
+    "components": [
+      {
+        "component_name": "Glycolic Acid",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Glycolic Acid",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "박개발",
+    "storage_location": "A-5-15",
+    "supplier": "듀폰",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-06-25T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 12.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-12-10T09:00:00Z",
+        "manager": "박개발",
+        "quantity": 10.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-06-25T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK1100",
+        "product_name": "AHA 필링 패드",
+        "percentage": 8.0
+      },
+      {
+        "product_code": "CL200",
+        "product_name": "필링 에센스",
+        "percentage": 4.0
+      }
+    ],
+    "description": "글리콜릭애씨드(AHA)는 사탕수수에서 유래한 수용성 각질 제거제입니다. 피부 표면의 각질을 제거하고 피부결을 개선하며 미백에도 효과적입니다."
+  },
+  {
+    "id": "RM037",
+    "raw_material_code": "RM037",
+    "korean_name": "락틱애씨드",
+    "english_name": "Lactic Acid",
+    "inci_name": "LACTIC ACID",
+    "cas_no": "50-21-5",
+    "components": [
+      {
+        "component_name": "L-Lactic Acid",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "L-Lactic Acid",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-5-16",
+    "supplier": "갈더마",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-08-15T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 15.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-02-05T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 12.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-15T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK1100",
+        "product_name": "AHA 필링 패드",
+        "percentage": 4.0
+      },
+      {
+        "product_code": "LC400",
+        "product_name": "립글로스 체리",
+        "percentage": 0.5
+      }
+    ],
+    "description": "락틱애씨드(AHA)는 우유에서 유래한 보습 각질 제거제입니다. 글리콜릭애씨드보다 순하고 보습력이 있어 건조하고 민감한 피부에 적합합니다."
+  },
+  {
+    "id": "RM038",
+    "raw_material_code": "RM038",
+    "korean_name": "프로폴리스추출물",
+    "english_name": "Propolis Extract",
+    "inci_name": "PROPOLIS EXTRACT",
+    "cas_no": "85665-41-4",
+    "components": [
+      {
+        "component_name": "Flavonoids",
+        "percentage": 35.0
+      },
+      {
+        "component_name": "Phenolic acids",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Other compounds",
+        "percentage": 35.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Flavonoids",
+    "main_component_percentage": 35.0,
+    "indicator_component": "Flavonoids (플라보노이드)",
+    "indicator_info": "항균, 항염 효과 지표성분, 최소 30% 이상 권장",
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-2-12",
+    "supplier": "코스맥스",
+    "material_type": "추출물",
+    "order_history": [
+      {
+        "order_date": "2024-05-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 25.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-15T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 20.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-03-20T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 15.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-05-10T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK1200",
+        "product_name": "프로폴리스 앰플",
+        "percentage": 10.0
+      },
+      {
+        "product_code": "SK960",
+        "product_name": "트러블 스팟",
+        "percentage": 2.0
+      }
+    ],
+    "description": "프로폴리스추출물은 꿀벌이 만든 천연 항균 물질에서 추출한 성분입니다. 항균, 항염, 항산화 효과가 뛰어나 트러블 피부와 피부 보호에 효과적입니다."
+  },
+  {
+    "id": "RM039",
+    "raw_material_code": "RM039",
+    "korean_name": "시어버터",
+    "english_name": "Shea Butter",
+    "inci_name": "BUTYROSPERMUM PARKII BUTTER",
+    "cas_no": "194043-92-0",
+    "components": [
+      {
+        "component_name": "Oleic Acid",
+        "percentage": 45.0
+      },
+      {
+        "component_name": "Stearic Acid",
+        "percentage": 40.0
+      },
+      {
+        "component_name": "Other fatty acids",
+        "percentage": 15.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Oleic Acid",
+    "main_component_percentage": 45.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "천연연구팀",
+    "manager": "최천연",
+    "storage_location": "B-4-12",
+    "supplier": "AAK",
+    "material_type": "버터",
+    "order_history": [
+      {
+        "order_date": "2024-07-20T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 50.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-01-10T09:00:00Z",
+        "manager": "최천연",
+        "quantity": 40.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-06-25T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 35.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-07-20T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC350",
+        "product_name": "장벽크림 리페어",
+        "percentage": 8.0
+      },
+      {
+        "product_code": "BD100",
+        "product_name": "바디버터 리치",
+        "percentage": 15.0
+      }
+    ],
+    "description": "시어버터는 시어나무 열매에서 추출한 식물성 버터입니다. 올레산과 스테아르산이 풍부하여 깊은 보습과 피부 보호 효과를 제공합니다."
+  },
+  {
+    "id": "RM040",
+    "raw_material_code": "RM040",
+    "korean_name": "아보벤존",
+    "english_name": "Avobenzone",
+    "inci_name": "BUTYL METHOXYDIBENZOYLMETHANE",
+    "cas_no": "70356-09-1",
+    "components": [
+      {
+        "component_name": "Avobenzone",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Avobenzone",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "검토중",
+    "department": "선케어연구팀",
+    "manager": "정선케어",
+    "storage_location": "D-2-05",
+    "supplier": "DSM",
+    "material_type": "자외선차단제",
+    "order_history": [
+      {
+        "order_date": "2024-03-01T09:00:00Z",
+        "manager": "정선케어",
+        "quantity": 80.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-03-01T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SN400",
+        "product_name": "선세럼 SPF50",
+        "percentage": 3.0
+      }
+    ],
+    "description": "아보벤존은 UVA를 흡수하는 화학적 자외선 차단제입니다. 광범위 UVA 차단에 효과적이나 광안정성이 낮아 다른 자외선 차단제와 병용합니다."
+  },
+  {
+    "id": "RM041",
+    "raw_material_code": "RM041",
+    "korean_name": "백합추출물",
+    "english_name": "Lily Extract",
+    "inci_name": "LILIUM CANDIDUM FLOWER EXTRACT",
+    "cas_no": "84776-65-8",
+    "components": [
+      {
+        "component_name": "Saponins",
+        "percentage": 25.0
+      },
+      {
+        "component_name": "Flavonoids",
+        "percentage": 20.0
+      },
+      {
+        "component_name": "Mucilage",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Other compounds",
+        "percentage": 25.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Mucilage",
+    "main_component_percentage": 30.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "승인대기",
+    "department": "천연연구팀",
+    "manager": "정추출",
+    "storage_location": "B-2-15",
+    "supplier": "한국콜마",
+    "material_type": "추출물",
+    "order_history": [
+      {
+        "order_date": "2024-11-05T09:00:00Z",
+        "manager": "정추출",
+        "quantity": 10.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-11-05T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK1300",
+        "product_name": "화이트닝 에센스",
+        "percentage": 3.0
+      }
+    ],
+    "description": "백합추출물은 백합 꽃에서 추출한 성분으로, 미백과 보습 효과가 있습니다. 피부를 맑고 투명하게 가꾸어주며 향수 원료로도 사용됩니다."
+  },
+  {
+    "id": "RM042",
+    "raw_material_code": "RM042",
+    "korean_name": "펩타이드 복합물",
+    "english_name": "Peptide Complex",
+    "inci_name": "ACETYL HEXAPEPTIDE-8",
+    "cas_no": "616204-22-9",
+    "components": [
+      {
+        "component_name": "Acetyl Hexapeptide-8",
+        "percentage": 50.0
+      },
+      {
+        "component_name": "Palmitoyl Tripeptide-1",
+        "percentage": 30.0
+      },
+      {
+        "component_name": "Copper Tripeptide-1",
+        "percentage": 20.0
+      }
+    ],
+    "is_single_component": false,
+    "main_component": "Acetyl Hexapeptide-8",
+    "main_component_percentage": 50.0,
+    "indicator_component": "Acetyl Hexapeptide-8 (아세틸 헥사펩타이드-8)",
+    "indicator_info": "근육 이완 효과 지표성분, 보톡스 유사 효과",
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "김연구",
+    "storage_location": "A-7-01",
+    "supplier": "리포텍",
+    "material_type": "기능성원료",
+    "order_history": [
+      {
+        "order_date": "2024-09-25T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 0.5,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-04-10T09:00:00Z",
+        "manager": "김연구",
+        "quantity": 0.3,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-09-25T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "SK900",
+        "product_name": "안티에이징 세럼",
+        "percentage": 5.0
+      },
+      {
+        "product_code": "EC200",
+        "product_name": "링클 아이크림",
+        "percentage": 3.0
+      }
+    ],
+    "description": "펩타이드 복합물은 여러 기능성 펩타이드를 조합한 안티에이징 원료입니다. 주름 개선, 피부 탄력 증가, 콜라겐 합성 촉진에 효과적입니다."
+  },
+  {
+    "id": "RM043",
+    "raw_material_code": "RM043",
+    "korean_name": "사이클로펜타실록산",
+    "english_name": "Cyclopentasiloxane",
+    "inci_name": "CYCLOPENTASILOXANE",
+    "cas_no": "541-02-6",
+    "components": [
+      {
+        "component_name": "Cyclopentasiloxane",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Cyclopentasiloxane",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-6-08",
+    "supplier": "다우케미칼",
+    "material_type": "실리콘",
+    "order_history": [
+      {
+        "order_date": "2024-10-05T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 150.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-04-20T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 120.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-11-10T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 100.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-10-05T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "MK100",
+        "product_name": "메이크업 베이스",
+        "percentage": 15.0
+      },
+      {
+        "product_code": "HP200",
+        "product_name": "헤어 에센스",
+        "percentage": 10.0
+      }
+    ],
+    "description": "사이클로펜타실록산은 휘발성 실리콘으로 가볍고 실키한 사용감을 제공합니다. 빠르게 증발하여 끈적임 없이 부드러운 마무리감을 줍니다."
+  },
+  {
+    "id": "RM044",
+    "raw_material_code": "RM044",
+    "korean_name": "카올린",
+    "english_name": "Kaolin",
+    "inci_name": "KAOLIN",
+    "cas_no": "1332-58-7",
+    "components": [
+      {
+        "component_name": "Kaolin Clay",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Kaolin Clay",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "색조연구팀",
+    "manager": "박색조",
+    "storage_location": "C-4-01",
+    "supplier": "엥겔하르트",
+    "material_type": "분말",
+    "order_history": [
+      {
+        "order_date": "2024-05-30T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 100.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-11-20T09:00:00Z",
+        "manager": "박색조",
+        "quantity": 80.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-05-30T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "PW100",
+        "product_name": "파우더 파운데이션",
+        "percentage": 20.0
+      },
+      {
+        "product_code": "MK200",
+        "product_name": "클레이 마스크",
+        "percentage": 30.0
+      }
+    ],
+    "description": "카올린은 백토라고도 불리는 천연 점토 광물입니다. 피지 흡수력이 뛰어나 파우더 제품과 클레이 마스크의 주성분으로 사용됩니다."
+  },
+  {
+    "id": "RM045",
+    "raw_material_code": "RM045",
+    "korean_name": "글리세릴스테아레이트",
+    "english_name": "Glyceryl Stearate",
+    "inci_name": "GLYCERYL STEARATE",
+    "cas_no": "31566-31-1",
+    "components": [
+      {
+        "component_name": "Glyceryl Stearate",
+        "percentage": 100.0
+      }
+    ],
+    "is_single_component": true,
+    "main_component": "Glyceryl Stearate",
+    "main_component_percentage": 100.0,
+    "indicator_component": null,
+    "indicator_info": null,
+    "order_status": "발주완료",
+    "department": "기초연구팀",
+    "manager": "이소재",
+    "storage_location": "A-2-08",
+    "supplier": "BASF",
+    "material_type": "유화제",
+    "order_history": [
+      {
+        "order_date": "2024-08-30T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 80.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2024-03-15T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 60.0,
+        "unit": "kg"
+      },
+      {
+        "order_date": "2023-10-01T09:00:00Z",
+        "manager": "이소재",
+        "quantity": 50.0,
+        "unit": "kg"
+      }
+    ],
+    "last_order_date": "2024-08-30T09:00:00Z",
+    "product_usage": [
+      {
+        "product_code": "LC100",
+        "product_name": "수분크림 베이직",
+        "percentage": 3.0
+      },
+      {
+        "product_code": "LC150",
+        "product_name": "영양크림 리치",
+        "percentage": 4.0
+      }
+    ],
+    "description": "글리세릴스테아레이트는 글리세린과 스테아르산의 에스테르로, 천연 유래 유화제입니다. 크림과 로션의 유화 안정성을 높이고 촉촉한 사용감을 줍니다."
+  }
+]

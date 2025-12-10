@@ -1,3 +1,7 @@
+# 대화 규칙
+
+- 구현사항에 대해서 추천 선택지 제시하고 컨펌한 후에 작업을 진행합니다.
+
 # GitHub Copilot 커스텀 코딩 규칙
 
 이 파일은 GitHub Copilot이 이 프로젝트에서 코드를 생성할 때 따라야 하는 규칙을 정의합니다.
@@ -6,8 +10,8 @@
 
 **이 프로젝트는 Microsoft Agent Framework의 공식 SDK와 패턴을 따릅니다.**
 
-- **공식 리포지토리**: https://github.com/microsoft/agent-framework/tree/main/python
-- **참조 샘플**: https://github.com/microsoft/agent-framework/tree/main/python/samples/getting_started
+- **공식 리포지토리**: https://github.com/microsoft/agent-framework/tree/python-1.0.0b251204/python
+- **참조 샘플**: https://github.com/microsoft/agent-framework/tree/python-1.0.0b251204/python/samples/getting_started
 - **공식 SDK 사용**: `agent-framework` 패키지 및 관련 통합 패키지
 - **패턴 준수**: 공식 샘플의 Agent 생성, 도구 사용, 워크플로우 패턴을 따름
 
@@ -16,7 +20,7 @@
 1. **공식 SDK 사용**: AutoGen이 아닌 `agent-framework` 패키지 사용
 2. **샘플 기반 구현**: 공식 getting_started 샘플의 구조와 패턴 따르기
 3. **비동기 우선**: async/await 패턴 사용
-4. **표준 API**: ChatAgent, OpenAIChatClient, AzureOpenAIChatClient 등 공식 API 사용
+4. **표준 API**: ChatAgent, AzureOpenAIChatClient, AzureOpenAIResponsesClient 등 공식 API 사용
 
 ## 일반 원칙
 
@@ -37,10 +41,16 @@
 ```python
 # ✅ 좋은 예 - 공식 SDK 사용
 from agent_framework import ChatAgent
-from agent_framework.openai import OpenAIChatClient
+from agent_framework.azure import AzureOpenAIResponsesClient
+
+chat_client = AzureOpenAIResponsesClient(
+    deployment_name=azure_openai_responses_deployment_name,
+    endpoint=azure_openai_endpoint,
+    api_key=azure_openai_api_key,
+)
 
 agent = ChatAgent(
-    chat_client=OpenAIChatClient(),
+    chat_client=chat_client,
     instructions="You are a helpful assistant.",
     tools=[get_weather],
 )
