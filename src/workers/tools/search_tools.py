@@ -13,6 +13,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from pydantic import Field
 
+from .models import SearchDocument, SearchResult
 from ...utils.config import get_config
 from ...utils.logger import get_logger
 
@@ -268,7 +269,8 @@ def search_documents(
     if not client:
         error_msg = f"Index '{index_name}' not initialized. Call initialize_search_clients() first."
         logger.error(error_msg)
-        return json.dumps({"error": error_msg, "documents": [], "count": 0})
+        result = SearchResult(documents=[], count=0, error=error_msg)
+        return result.model_dump_json(exclude_none=True)
 
     try:
         results = client.search(
@@ -285,25 +287,24 @@ def search_documents(
 
         documents = []
         for result in results:
-            documents.append(
-                {
-                    "id": result.get("id"),
-                    "korean_name": result.get("korean_name"),
-                    "english_name": result.get("english_name"),
-                    "cas_no": result.get("cas_no"),
-                    "order_status": result.get("order_status"),
-                    "score": result.get("@search.score"),
-                }
+            doc = SearchDocument(
+                id=result.get("id"),
+                korean_name=result.get("korean_name"),
+                english_name=result.get("english_name"),
+                cas_no=result.get("cas_no"),
+                order_status=result.get("order_status"),
+                score=result.get("@search.score"),
             )
+            documents.append(doc)
 
         logger.info(f"검색 완료: query='{query}', results={len(documents)}")
-        return json.dumps(
-            {"documents": documents, "count": len(documents)}, ensure_ascii=False
-        )
+        search_result = SearchResult(documents=documents, count=len(documents))
+        return search_result.model_dump_json(exclude_none=True)
 
     except Exception as e:
         logger.error(f"검색 중 오류 발생: {e}", exc_info=True)
-        return json.dumps({"error": str(e), "documents": [], "count": 0})
+        result = SearchResult(documents=[], count=0, error=str(e))
+        return result.model_dump_json(exclude_none=True)
 
 
 def search_with_filter(
@@ -343,7 +344,8 @@ def search_with_filter(
     if not client:
         error_msg = f"Index '{index_name}' not initialized. Call initialize_search_clients() first."
         logger.error(error_msg)
-        return json.dumps({"error": error_msg, "documents": [], "count": 0})
+        result = SearchResult(documents=[], count=0, error=error_msg)
+        return result.model_dump_json(exclude_none=True)
 
     try:
         results = client.search(
@@ -361,24 +363,23 @@ def search_with_filter(
 
         documents = []
         for result in results:
-            documents.append(
-                {
-                    "id": result.get("id"),
-                    "korean_name": result.get("korean_name"),
-                    "english_name": result.get("english_name"),
-                    "cas_no": result.get("cas_no"),
-                    "order_status": result.get("order_status"),
-                    "score": result.get("@search.score"),
-                }
+            doc = SearchDocument(
+                id=result.get("id"),
+                korean_name=result.get("korean_name"),
+                english_name=result.get("english_name"),
+                cas_no=result.get("cas_no"),
+                order_status=result.get("order_status"),
+                score=result.get("@search.score"),
             )
+            documents.append(doc)
 
         logger.info(
             f"필터 검색 완료: query='{query}', filter='{filter_expr}', results={len(documents)}"
         )
-        return json.dumps(
-            {"documents": documents, "count": len(documents)}, ensure_ascii=False
-        )
+        search_result = SearchResult(documents=documents, count=len(documents))
+        return search_result.model_dump_json(exclude_none=True)
 
     except Exception as e:
         logger.error(f"필터 검색 중 오류 발생: {e}", exc_info=True)
-        return json.dumps({"error": str(e), "documents": [], "count": 0})
+        result = SearchResult(documents=[], count=0, error=str(e))
+        return result.model_dump_json(exclude_none=True)
