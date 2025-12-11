@@ -1,13 +1,11 @@
 """Azure AI Search 연동 Tool 함수들
 
-Mock과 실제 Azure AI Search를 환경변수로 전환 가능하도록 설계했습니다.
+Azure AI Search를 사용하여 문서를 검색하는 도구 함수들을 제공합니다.
 """
 
 from __future__ import annotations
 
-import json
-import os
-from typing import Annotated, Any
+from typing import Annotated
 
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
@@ -20,127 +18,7 @@ from ...utils.logger import get_logger
 logger = get_logger(__name__)
 
 # 전역 클라이언트 저장소
-_search_clients: dict[str, Any] = {}
-
-
-class MockSearchClient:
-    """프로토타입용 Mock Azure AI Search 클라이언트
-    
-    실제 Azure AI Search와 동일한 인터페이스를 제공하지만,
-    data/cosmetic_raw_materials.json 파일에서 Mock 데이터를 로드합니다.
-    """
-
-    def __init__(self, index_name: str):
-        self.index_name = index_name
-        self._mock_data = self._load_mock_data()
-        logger.info(f"MockSearchClient 초기화: {index_name}, 데이터: {len(self._mock_data)}개")
-
-    def _load_mock_data(self) -> list[dict]:
-        """Mock 데이터를 JSON 파일에서 로드합니다.
-        
-        data/cosmetic_raw_materials.json 파일을 읽어서 반환합니다.
-        실제 Azure AI Search 스키마와 동일한 필드명을 사용합니다.
-        """
-        if self.index_name not in ("raw-materials", "cosmetic-raw-materials"):
-            return []
-        
-        # JSON 파일 경로 찾기
-        from pathlib import Path
-        
-        # 프로젝트 루트 찾기 (src/workers/tools에서 3단계 상위)
-        current_file = Path(__file__)
-        project_root = current_file.parent.parent.parent.parent
-        json_path = project_root / "data" / "cosmetic_raw_materials.json"
-        
-        if not json_path.exists():
-            logger.warning(f"Mock 데이터 파일을 찾을 수 없습니다: {json_path}")
-            return []
-        
-        try:
-            with open(json_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            
-            # 검색 score 추가 (실제 Azure AI Search와 동일하게)
-            for i, item in enumerate(data):
-                item["@search.score"] = 10.0 - (i * 0.1)  # 순서대로 감소하는 score
-            
-            logger.info(f"Mock 데이터 로드 완료: {len(data)}개 원료")
-            return data
-            
-        except Exception as e:
-            logger.error(f"Mock 데이터 로드 실패: {e}", exc_info=True)
-            return []
-
-    def search(
-        self,
-        search_text: str,
-        top: int = 10,
-        filter: str | None = None,
-        select: list[str] | None = None,
-        **kwargs,
-    ):
-        """Mock 검색 실행
-        
-        키워드 매칭으로 간단한 검색을 시뮬레이션합니다.
-        
-        Args:
-            search_text: 검색 쿼리
-            top: 최대 결과 수
-            filter: OData 필터 표현식
-            select: 반환할 필드 목록
-            **kwargs: 기타 옵션 (무시)
-        
-        Yields:
-            검색 결과 문서
-        """
-        results = []
-
-        # 1. 텍스트 매칭
-        for doc in self._mock_data:
-            if search_text.lower() in doc.get("korean_name", "").lower():
-                results.append(doc)
-            elif search_text.lower() in doc.get("english_name", "").lower():
-                results.append(doc)
-
-        # 2. 필터 적용 (간단한 파싱)
-        if filter:
-            filtered = []
-            for doc in results:
-                if self._match_filter(doc, filter):
-                    filtered.append(doc)
-            results = filtered
-
-        # 3. 정렬 (score 기준)
-        results.sort(key=lambda x: x.get("@search.score", 0), reverse=True)
-
-        # 4. Top-K
-        results = results[:top]
-
-        # 5. Select 필드 적용
-        if select:
-            results = [{k: doc.get(k) for k in select + ["@search.score"]} for doc in results]
-
-        logger.info(
-            f"Mock 검색 실행: query='{search_text}', filter='{filter}', results={len(results)}"
-        )
-
-        return iter(results)
-
-    def _match_filter(self, doc: dict, filter_expr: str) -> bool:
-        """간단한 OData 필터 매칭
-        
-        예: "order_status eq '발주완료'"
-        """
-        try:
-            # "field eq 'value'" 파싱
-            if " eq " in filter_expr:
-                field, value = filter_expr.split(" eq ")
-                field = field.strip()
-                value = value.strip().strip("'\"")
-                return doc.get(field) == value
-        except Exception:
-            pass
-        return True
+_search_clients: dict[str, SearchClient] = {}
 
 
 def initialize_search_clients(
@@ -148,7 +26,6 @@ def initialize_search_clients(
 ) -> None:
     """Azure AI Search 클라이언트 초기화
     
-    환경변수 USE_MOCK_SEARCH에 따라 Mock 또는 실제 클라이언트를 생성합니다.
     indexes 파라미터가 없으면 config.py의 설정을 자동으로 사용합니다.
     
     Args:
@@ -162,16 +39,10 @@ def initialize_search_clients(
             None인 경우 config.py의 Azure Search 설정 사용
             
     Examples:
-        >>> # Mock 사용 (기본)
-        >>> os.environ["USE_MOCK_SEARCH"] = "true"
-        >>> initialize_search_clients()
-        
         >>> # 실제 Azure AI Search 사용 (config.py 설정)
-        >>> os.environ["USE_MOCK_SEARCH"] = "false"
         >>> initialize_search_clients()
         
         >>> # 실제 Azure AI Search 사용 (직접 설정)
-        >>> os.environ["USE_MOCK_SEARCH"] = "false"
         >>> initialize_search_clients({
         ...     "cosmetic-raw-materials": {
         ...         "endpoint": "https://my-search.search.windows.net",
@@ -181,50 +52,41 @@ def initialize_search_clients(
     """
     global _search_clients
 
-    use_mock = os.getenv("USE_MOCK_SEARCH", "true").lower() == "true"
+    # indexes 파라미터가 없으면 config.py에서 설정 로드
+    if not indexes:
+        config = get_config()
+        search_settings = config.azure_search
 
-    if use_mock:
-        # Mock 클라이언트 생성 (두 인덱스 이름 모두 지원)
-        _search_clients["raw-materials"] = MockSearchClient("raw-materials")
-        _search_clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
-        logger.info("Mock Search 클라이언트 초기화 완료")
-    else:
-        # 실제 Azure AI Search 클라이언트 생성
-        
-        # indexes 파라미터가 없으면 config.py에서 설정 로드
-        if not indexes:
-            config = get_config()
-            search_settings = config.azure_search
-            
-            if not search_settings.endpoint or not search_settings.api_key:
-                raise ValueError(
-                    "Azure AI Search 설정이 필요합니다. "
-                    "환경변수 AZURE_SEARCH_ENDPOINT, AZURE_SEARCH_API_KEY를 설정하세요."
-                )
-            
-            # config.py 설정으로 인덱스 생성
-            index_name = search_settings.index_name or "cosmetic-raw-materials"
-            indexes = {
-                index_name: {
-                    "endpoint": search_settings.endpoint,
-                    "api_key": search_settings.api_key,
-                }
-            }
-
-        for index_name, config in indexes.items():
-            endpoint = config.get("endpoint")
-            api_key = config.get("api_key")
-
-            if not endpoint or not api_key:
-                raise ValueError(f"인덱스 '{index_name}'의 endpoint와 api_key가 필요합니다")
-
-            _search_clients[index_name] = SearchClient(
-                endpoint=endpoint,
-                index_name=index_name,
-                credential=AzureKeyCredential(api_key),
+        if not search_settings.endpoint or not search_settings.api_key:
+            raise ValueError(
+                "Azure AI Search 설정이 필요합니다. "
+                "환경변수 AZURE_SEARCH_ENDPOINT, AZURE_SEARCH_API_KEY를 설정하세요."
             )
 
-        logger.info(f"Azure AI Search 클라이언트 초기화 완료: {list(indexes.keys())}")
+        # config.py 설정으로 인덱스 생성
+        index_name = search_settings.index_name or "cosmetic-raw-materials"
+        indexes = {
+            index_name: {
+                "endpoint": search_settings.endpoint,
+                "api_key": search_settings.api_key,
+            }
+        }
+
+    for index_name, config in indexes.items():
+        endpoint = config.get("endpoint")
+        api_key = config.get("api_key")
+
+        if not endpoint or not api_key:
+            raise ValueError(f"인덱스 '{index_name}'의 endpoint와 api_key가 필요합니다")
+
+        _search_clients[index_name] = SearchClient(
+            endpoint=endpoint,
+            index_name=index_name,
+            credential=AzureKeyCredential(api_key),
+        )
+
+    logger.info(f"Azure AI Search 클라이언트 초기화 완료: {list(indexes.keys())}")
+
 
 
 def search_documents(
@@ -288,7 +150,7 @@ def search_documents(
         documents = []
         for result in results:
             doc = SearchDocument(
-                id=result.get("id"),
+                id=result.get("id") or "",
                 korean_name=result.get("korean_name"),
                 english_name=result.get("english_name"),
                 cas_no=result.get("cas_no"),
@@ -364,7 +226,7 @@ def search_with_filter(
         documents = []
         for result in results:
             doc = SearchDocument(
-                id=result.get("id"),
+                id=result.get("id") or "",
                 korean_name=result.get("korean_name"),
                 english_name=result.get("english_name"),
                 cas_no=result.get("cas_no"),

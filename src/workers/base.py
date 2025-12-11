@@ -59,16 +59,11 @@ class BaseWorker(ABC):
         self.tools = tools
         
         # Microsoft Agent Framework의 ChatAgent 초기화
-        # chat_client가 None이면 테스트 모드 (Mock)
-        if chat_client is not None:
-            self.agent = ChatAgent(
-                chat_client=chat_client,
-                instructions=instructions,
-                tools=tools,
-            )
-        else:
-            # 테스트용 Mock Agent
-            self.agent = None
+        self.agent = ChatAgent(
+            chat_client=chat_client,
+            instructions=instructions,
+            tools=tools,
+        )
         
         logger.info(f"{self.__class__.__name__} 초기화 완료 (tools={len(tools)})")
 
@@ -177,7 +172,6 @@ class BaseWorker(ABC):
         """Agent를 실행하고 결과를 반환합니다.
         
         Microsoft Agent Framework의 ChatAgent.run() 메서드를 호출합니다.
-        chat_client가 None인 경우(테스트 모드)는 Mock 응답을 반환합니다.
         
         Args:
             query: 질의
@@ -195,32 +189,21 @@ class BaseWorker(ABC):
         Raises:
             Exception: Agent 실행 중 오류 발생 시
         """
-        # 테스트 모드 (chat_client가 None)
-        if self.chat_client is None or self.agent is None:
-            logger.warning(
-                "BaseWorker._run_agent(): 테스트 모드 (chat_client=None), Mock 응답 반환"
-            )
-            return {
-                "content": f"[Mock] '{query}'에 대한 응답입니다.",
-                "iterations": 1,
-                "tools_used": [],
-                "metadata": {"mock": True},
-            }
-        
-        # 실제 Agent 실행
+        # Agent 실행
         try:
             # Microsoft Agent Framework의 ChatAgent.run() 호출
             # run() 메서드는 메시지를 처리하고 응답을 반환합니다
             response = await self.agent.run(query)
             
             # 응답 파싱
-            # Agent Framework의 응답 구조에 따라 적절히 파싱
             content = self._extract_content_from_response(response)
             tools_used = self._extract_tools_used_from_response(response)
             
+            logger.info(f"Agent 실행 완료: tools_used={tools_used}")
+            
             return {
                 "content": content,
-                "iterations": 1,  # Agent Framework는 내부적으로 반복 관리
+                "iterations": 1,
                 "tools_used": tools_used,
                 "metadata": {
                     "response_type": type(response).__name__,
@@ -269,25 +252,21 @@ class BaseWorker(ABC):
         """
         tools_used = []
         
-        # Tool 호출 정보 추출
-        if hasattr(response, "tool_calls"):
-            for tool_call in response.tool_calls:
-                if hasattr(tool_call, "function"):
-                    tools_used.append(tool_call.function.name)
-                elif hasattr(tool_call, "name"):
-                    tools_used.append(tool_call.name)
-        elif hasattr(response, "messages"):
-            # 메시지 히스토리에서 Tool 호출 추출
+        # Agent Framework의 AgentRunResponse에서 Tool 추출
+        # response.messages의 각 메시지의 contents를 확인
+        if hasattr(response, "messages"):
             for message in response.messages:
-                if hasattr(message, "tool_calls") and message.tool_calls:
-                    for tool_call in message.tool_calls:
-                        if hasattr(tool_call, "function"):
-                            tools_used.append(tool_call.function.name)
-                        elif hasattr(tool_call, "name"):
-                            tools_used.append(tool_call.name)
+                if hasattr(message, 'contents'):
+                    for content in message.contents:
+                        content_type = type(content).__name__
+                        
+                        # FunctionCallContent인 경우 함수 이름 추출
+                        if content_type == "FunctionCallContent":
+                            if hasattr(content, 'name'):
+                                tools_used.append(content.name)
         
-        return tools_used
-
+        # 중복 제거 (순서 유지)
+        return list(dict.fromkeys(tools_used))
     def _extract_sources(self, result: dict[str, Any]) -> list[dict[str, Any]]:
         """Agent 실행 결과에서 출처 정보를 추출합니다.
         

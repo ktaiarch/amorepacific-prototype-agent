@@ -18,25 +18,24 @@ class Router:
     VALID_WORKERS = {"원료", "처방", "규제"}
     MAX_CONTEXT_MESSAGES = 3
 
-    def __init__(self, chat_client=None):
+    def __init__(self, chat_client):
         """Router를 초기화합니다.
 
         Args:
-            chat_client: Agent Framework의 ChatClient (None이면 테스트 모드)
+            chat_client: Agent Framework의 ChatClient
+            
+        Raises:
+            ValueError: chat_client가 None인 경우
         """
-        self.chat_client = chat_client
-
         if chat_client is None:
-            # 테스트 모드
-            self.agent = None
-            logger.info("Router 테스트 모드로 초기화")
-        else:
-            # 프로덕션 모드
-            self.agent = ChatAgent(
-                chat_client=chat_client,
-                instructions=ROUTER_INSTRUCTIONS,
-            )
-            logger.info("Router 프로덕션 모드로 초기화")
+            raise ValueError("chat_client는 필수입니다.")
+            
+        self.chat_client = chat_client
+        self.agent = ChatAgent(
+            chat_client=chat_client,
+            instructions=ROUTER_INSTRUCTIONS,
+        )
+        logger.info("Router 초기화 완료")
 
     async def route(
         self, query: str, context: list[dict] | None = None
@@ -60,10 +59,6 @@ class Router:
             >>> print(result["worker"])  # "원료"
             >>> print(result["confidence"])  # 0.95
         """
-        # 테스트 모드: Mock 응답 반환
-        if self.agent is None:
-            return self._get_mock_routing_result(query)
-
         # 컨텍스트 포맷팅
         context_str = self._format_context(context)
 
@@ -250,43 +245,6 @@ class Router:
             if not (0.0 <= confidence <= 1.0):
                 logger.warning(f"confidence 범위 초과: {confidence}, 0.5로 설정")
                 result["confidence"] = 0.5
-
-    def _get_mock_routing_result(self, query: str) -> dict[str, Any]:
-        """테스트용 Mock 라우팅 결과를 반환합니다.
-
-        Args:
-            query: 사용자 질의
-
-        Returns:
-            Mock 라우팅 결과
-        """
-        # 간단한 키워드 기반 라우팅 (순서 중요: 규제 먼저 체크)
-        query_lower = query.lower()
-
-        # 규제 관련 키워드 우선 체크
-        if any(
-            kw in query_lower
-            for kw in ["규제", "국가", "허용", "금지", "regulation", "인증"]
-        ):
-            worker = "규제"
-            confidence = 0.88
-        # 처방 관련 키워드
-        elif any(kw in query_lower for kw in ["처방", "포뮬라", "formula", "구성"]):
-            worker = "처방"
-            confidence = 0.85
-        # 원료 관련 키워드
-        elif any(kw in query_lower for kw in ["원료", "성분", "cas", "ingredient"]):
-            worker = "원료"
-            confidence = 0.9
-        else:
-            worker = self.DEFAULT_WORKER
-            confidence = 0.7
-
-        return {
-            "worker": worker,
-            "confidence": confidence,
-            "reasoning": f"테스트 모드: '{query}' 키워드 기반 라우팅",
-        }
 
     def _get_fallback_result(self) -> dict[str, Any]:
         """파싱 실패 시 기본값 결과를 반환합니다.

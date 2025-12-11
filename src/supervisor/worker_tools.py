@@ -26,12 +26,16 @@ async def search_ingredient_tool(
 
     Returns:
         원료 검색 결과 문자열
+        
+    Raises:
+        ValueError: ingredient_worker가 주입되지 않은 경우
     """
     logger.info(f"원료 검색 Tool 호출: query={query}")
 
     if ingredient_worker is None:
-        logger.warning("IngredientWorker가 주입되지 않음 (테스트 모드)")
-        return f"[Mock] 원료 검색 결과: {query}"
+        error_msg = "IngredientWorker가 주입되지 않았습니다."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
 
     try:
         response = await ingredient_worker.process(query, context=None)
@@ -58,12 +62,16 @@ async def search_formula_tool(
 
     Returns:
         처방 검색 결과 문자열
+        
+    Raises:
+        ValueError: formula_worker가 주입되지 않은 경우
     """
     logger.info(f"처방 검색 Tool 호출: query={query}")
 
     if formula_worker is None:
-        logger.warning("FormulaWorker가 주입되지 않음 (테스트 모드)")
-        return f"[Mock] 처방 검색 결과: {query}"
+        error_msg = "FormulaWorker가 주입되지 않았습니다."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
 
     try:
         response = await formula_worker.process(query, context=None)
@@ -90,12 +98,16 @@ async def search_regulation_tool(
 
     Returns:
         규제 검색 결과 문자열
+        
+    Raises:
+        ValueError: regulation_worker가 주입되지 않은 경우
     """
     logger.info(f"규제 검색 Tool 호출: query={query}")
 
     if regulation_worker is None:
-        logger.warning("RegulationWorker가 주입되지 않음 (테스트 모드)")
-        return f"[Mock] 규제 검색 결과: {query}"
+        error_msg = "RegulationWorker가 주입되지 않았습니다."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
 
     try:
         response = await regulation_worker.process(query, context=None)
