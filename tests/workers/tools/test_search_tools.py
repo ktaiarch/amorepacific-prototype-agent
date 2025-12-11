@@ -4,26 +4,25 @@ search_documents, search_with_filter 함수들의 동작을 검증합니다.
 """
 
 import json
-import os
 
 import pytest
 
-from src.workers.tools.search_tools import (
-    initialize_search_clients,
-    search_documents,
-    search_with_filter,
-)
+from src.workers.tools import get_search_client_manager, search_documents, search_with_filter
+from tests.mocks import MockSearchClient
 
 
 @pytest.fixture(autouse=True)
 def setup_mock_search():
     """테스트용 Mock Search 클라이언트 초기화"""
-    # Mock 모드 강제 설정
-    os.environ["USE_MOCK_SEARCH"] = "true"
-    initialize_search_clients()
+    manager = get_search_client_manager()
+    
+    # Mock 클라이언트로 수동 초기화
+    manager._clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
+    
     yield
+    
     # 정리
-    os.environ.pop("USE_MOCK_SEARCH", None)
+    manager.clear()
 
 
 class TestSearchDocuments:
@@ -156,28 +155,28 @@ class TestSearchWithFilter:
             assert name_match
 
 
-class TestInitializeSearchClients:
-    """initialize_search_clients 함수 테스트"""
+class TestSearchClientManager:
+    """SearchClientManager 클래스 테스트"""
 
     def test_mock_initialization(self):
         """Mock 클라이언트 초기화를 확인합니다."""
         # Arrange
-        os.environ["USE_MOCK_SEARCH"] = "true"
+        manager = get_search_client_manager()
+        manager._clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
 
-        # Act
-        initialize_search_clients()
-
-        # Assert - 검색이 동작해야 함
+        # Act & Assert - 검색이 동작해야 함
         result_json = search_documents(query="글리세린", top_k=10)
         result = json.loads(result_json)
         assert "error" not in result or result["error"] is None
+        
+        # 정리
+        manager.clear()
 
     def test_uninitialized_client_error(self):
         """초기화되지 않은 클라이언트 사용 시 에러를 확인합니다."""
         # Arrange - 클라이언트 초기화 없이 검색 시도
-        from src.workers.tools import search_tools
-
-        search_tools._search_clients.clear()
+        manager = get_search_client_manager()
+        manager.clear()
 
         # Act
         result_json = search_documents(query="테스트", top_k=10)
@@ -187,6 +186,9 @@ class TestInitializeSearchClients:
         assert "error" in result
         assert result["count"] == 0
         assert "not initialized" in result["error"].lower()
+        
+        # 정리 - 다시 Mock 클라이언트 설정
+        manager._clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
 
 
 class TestMockSearchClient:

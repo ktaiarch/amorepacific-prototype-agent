@@ -3,21 +3,20 @@
 원료 검색 Worker의 동작을 검증합니다.
 """
 
-import os
-
 import pytest
 
 from src.workers.ingredient import INGREDIENT_INSTRUCTIONS, IngredientWorker
-from src.workers.tools import initialize_search_clients
+from src.workers.tools import get_search_client_manager
+from tests.mocks import MockSearchClient
 
 
 @pytest.fixture(autouse=True)
 def setup_search_tools():
     """모든 테스트에서 Mock Search 클라이언트 자동 초기화"""
-    os.environ["USE_MOCK_SEARCH"] = "true"
-    initialize_search_clients()
+    manager = get_search_client_manager()
+    manager._clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
     yield
-    os.environ.pop("USE_MOCK_SEARCH", None)
+    manager.clear()
 
 
 @pytest.fixture

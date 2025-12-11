@@ -56,8 +56,10 @@ def initialize_orchestrator():
     
     try:
         # Search client 초기화
-        from src.workers.tools.search_tools import initialize_search_clients
-        initialize_search_clients()
+        from src.workers.tools import get_search_client_manager
+        
+        manager = get_search_client_manager()
+        manager.initialize()
         
         # ChatClient 생성
         from agent_framework.azure import AzureOpenAIChatClient

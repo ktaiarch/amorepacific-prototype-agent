@@ -198,14 +198,15 @@ class Orchestrator:
         from ..supervisor.aggregator import Aggregator
         from ..supervisor.supervisor import SupervisorAgent
         from ..workers.ingredient import IngredientWorker
-        from ..workers.tools.search_tools import (
-            initialize_search_clients,
+        from ..workers.tools import (
+            get_search_client_manager,
             search_documents,
             search_with_filter,
         )
         
-        # Search tools 초기화
-        initialize_search_clients()
+        # Search client 초기화
+        manager = get_search_client_manager()
+        manager.initialize()
         
         # 컴포넌트 생성
         session_manager = SessionManager(ttl_minutes=ttl_minutes)

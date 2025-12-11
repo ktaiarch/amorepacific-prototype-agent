@@ -18,11 +18,12 @@ from agent_framework.azure import AzureOpenAIChatClient
 from src.supervisor.aggregator import Aggregator
 from src.supervisor.supervisor import SupervisorAgent
 from src.workers.ingredient import IngredientWorker
-from src.workers.tools.search_tools import (
-    initialize_search_clients,
+from src.workers.tools import (
+    get_search_client_manager,
     search_documents,
     search_with_filter,
 )
+from tests.mocks import MockSearchClient
 
 
 # ============================================================================
@@ -32,7 +33,8 @@ from src.workers.tools.search_tools import (
 @pytest.fixture(scope="session", autouse=True)
 def setup_search_clients():
     """Search Client 초기화 (한 번만 실행)."""
-    initialize_search_clients()
+    manager = get_search_client_manager()
+    manager._clients["cosmetic-raw-materials"] = MockSearchClient("cosmetic-raw-materials")
 
 
 @pytest.fixture

@@ -44,10 +44,11 @@ class IngredientWorker(BaseWorker):
     
     Examples:
         >>> from agent_framework.azure import AzureOpenAIResponsesClient
-        >>> from workers.tools import search_documents, search_with_filter, initialize_search_clients
+        >>> from workers.tools import search_documents, search_with_filter, get_search_client_manager
         >>> 
-        >>> # 1. Search Tools 초기화
-        >>> initialize_search_clients()
+        >>> # 1. Search Client 초기화
+        >>> manager = get_search_client_manager()
+        >>> manager.initialize()
         >>> 
         >>> # 2. Worker 생성
         >>> client = AzureOpenAIResponsesClient()

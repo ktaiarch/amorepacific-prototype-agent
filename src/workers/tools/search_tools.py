@@ -7,87 +7,13 @@ from __future__ import annotations
 
 from typing import Annotated
 
-from azure.core.credentials import AzureKeyCredential
-from azure.search.documents import SearchClient
 from pydantic import Field
 
 from .models import SearchDocument, SearchResult
-from ...utils.config import get_config
+from .search_client import get_search_client_manager
 from ...utils.logger import get_logger
 
 logger = get_logger(__name__)
-
-# 전역 클라이언트 저장소
-_search_clients: dict[str, SearchClient] = {}
-
-
-def initialize_search_clients(
-    indexes: dict[str, dict[str, str]] | None = None,
-) -> None:
-    """Azure AI Search 클라이언트 초기화
-    
-    indexes 파라미터가 없으면 config.py의 설정을 자동으로 사용합니다.
-    
-    Args:
-        indexes: 인덱스별 설정 (선택사항)
-            {
-                "cosmetic-raw-materials": {
-                    "endpoint": "https://...",
-                    "api_key": "...",
-                }
-            }
-            None인 경우 config.py의 Azure Search 설정 사용
-            
-    Examples:
-        >>> # 실제 Azure AI Search 사용 (config.py 설정)
-        >>> initialize_search_clients()
-        
-        >>> # 실제 Azure AI Search 사용 (직접 설정)
-        >>> initialize_search_clients({
-        ...     "cosmetic-raw-materials": {
-        ...         "endpoint": "https://my-search.search.windows.net",
-        ...         "api_key": "...",
-        ...     }
-        ... })
-    """
-    global _search_clients
-
-    # indexes 파라미터가 없으면 config.py에서 설정 로드
-    if not indexes:
-        config = get_config()
-        search_settings = config.azure_search
-
-        if not search_settings.endpoint or not search_settings.api_key:
-            raise ValueError(
-                "Azure AI Search 설정이 필요합니다. "
-                "환경변수 AZURE_SEARCH_ENDPOINT, AZURE_SEARCH_API_KEY를 설정하세요."
-            )
-
-        # config.py 설정으로 인덱스 생성
-        index_name = search_settings.index_name or "cosmetic-raw-materials"
-        indexes = {
-            index_name: {
-                "endpoint": search_settings.endpoint,
-                "api_key": search_settings.api_key,
-            }
-        }
-
-    for index_name, config in indexes.items():
-        endpoint = config.get("endpoint")
-        api_key = config.get("api_key")
-
-        if not endpoint or not api_key:
-            raise ValueError(f"인덱스 '{index_name}'의 endpoint와 api_key가 필요합니다")
-
-        _search_clients[index_name] = SearchClient(
-            endpoint=endpoint,
-            index_name=index_name,
-            credential=AzureKeyCredential(api_key),
-        )
-
-    logger.info(f"Azure AI Search 클라이언트 초기화 완료: {list(indexes.keys())}")
-
-
 
 def search_documents(
     query: Annotated[str, Field(description="검색 쿼리 텍스트")],
@@ -127,9 +53,15 @@ def search_documents(
         >>> print(result)
         {"documents": [...], "count": 2}
     """
-    client = _search_clients.get(index_name)
+    # SearchClientManager에서 클라이언트 가져오기
+    manager = get_search_client_manager()
+    client = manager.get_client(index_name)
+    
     if not client:
-        error_msg = f"Index '{index_name}' not initialized. Call initialize_search_clients() first."
+        error_msg = (
+            f"Index '{index_name}' not initialized. "
+            f"Call SearchClientManager.initialize() first."
+        )
         logger.error(error_msg)
         result = SearchResult(documents=[], count=0, error=error_msg)
         return result.model_dump_json(exclude_none=True)
@@ -202,9 +134,15 @@ def search_with_filter(
         >>> print(result)
         {"documents": [...], "count": 1}
     """
-    client = _search_clients.get(index_name)
+    # SearchClientManager에서 클라이언트 가져오기
+    manager = get_search_client_manager()
+    client = manager.get_client(index_name)
+    
     if not client:
-        error_msg = f"Index '{index_name}' not initialized. Call initialize_search_clients() first."
+        error_msg = (
+            f"Index '{index_name}' not initialized. "
+            f"Call SearchClientManager.initialize() first."
+        )
         logger.error(error_msg)
         result = SearchResult(documents=[], count=0, error=error_msg)
         return result.model_dump_json(exclude_none=True)

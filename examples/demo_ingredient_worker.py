@@ -35,8 +35,8 @@ from agent_framework.azure import AzureOpenAIResponsesClient
 from src.utils.config import get_config
 from src.utils.logger import get_logger
 from src.workers.ingredient import IngredientWorker
-from src.workers.tools.search_tools import (
-    initialize_search_clients,
+from src.workers.tools import (
+    get_search_client_manager,
     search_documents,
     search_with_filter,
 )
@@ -171,7 +171,8 @@ async def run_demo() -> None:
         print("   ✓ Azure OpenAI 클라이언트 초기화 완료")
         
         # 2. Search 클라이언트 초기화
-        initialize_search_clients()
+        manager = get_search_client_manager()
+        manager.initialize()
         print("   ✓ Search 클라이언트 초기화 완료")
         
         # 3. Worker 생성

@@ -3,10 +3,12 @@
 Azure AI Search 등 외부 데이터 소스 연동 도구를 제공합니다.
 """
 
-from .search_tools import (
-    initialize_search_clients,
-    search_documents,
-    search_with_filter,
-)
+from .search_client import SearchClientManager, get_search_client_manager
+from .search_tools import search_documents, search_with_filter
 
-__all__ = ["search_documents", "search_with_filter", "initialize_search_clients"]
+__all__ = [
+    "search_documents",
+    "search_with_filter",
+    "SearchClientManager",
+    "get_search_client_manager",
+]
