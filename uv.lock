@@ -2795,7 +2795,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "agent-framework", specifier = ">=1.0.0b251204" },
+    { name = "agent-framework", specifier = "==1.0.0b251204" },
     { name = "azure-ai-inference", specifier = ">=1.0.0b9" },
     { name = "azure-identity", specifier = ">=1.25.1" },
     { name = "azure-search-documents", specifier = ">=11.7.0b2" },
