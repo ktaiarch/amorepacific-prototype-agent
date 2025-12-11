@@ -85,6 +85,38 @@ uv run streamlit run src/ui/app.py
 
 브라우저에서 http://localhost:8501 접속
 
+#### IngredientWorker 데모 실행
+
+5가지 다양한 질의를 처리하는 데모 스크립트:
+
+```bash
+# Mock 모드로 실행 (Azure AI Search 불필요)
+export USE_MOCK_SEARCH=true
+uv run python examples/demo_ingredient_worker.py
+
+# Azure AI Search 모드로 실행 (실제 데이터베이스 사용)
+USE_MOCK_SEARCH=false uv run python examples/demo_ingredient_worker.py
+```
+
+데모에서 테스트하는 질의:
+
+1. 간단한 원료명 검색: "글리세린 원료 찾아줘"
+2. 영문명 + 함량 필터: "Cetearyl Alcohol 100%인 원료만"
+3. 한글명 + 발주 상태: "나이아신아마이드 발주완료된 것만"
+4. CAS 번호 검색: "CAS 번호가 56-81-5인 원료"
+5. 복합 조건: "점도가 높은 보습 원료 추천"
+
+출력 결과:
+
+- 각 질의에 대한 응답
+- 참조 문서 (원료 정보)
+- 처리 시간 및 통계
+
+**Azure AI Search 사용 시:**
+- 실제 인덱스에서 검색 수행
+- 하이브리드 검색 (키워드 + 시맨틱) 적용
+- 필터 기능 (발주 상태 등) 활용
+
 #### 프로그래밍 방식 사용
 
 ```python
