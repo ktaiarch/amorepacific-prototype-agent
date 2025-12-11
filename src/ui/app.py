@@ -55,6 +55,10 @@ def initialize_orchestrator():
         st.stop()
     
     try:
+        # Search client 초기화
+        from src.workers.tools.search_tools import initialize_search_clients
+        initialize_search_clients()
+        
         # ChatClient 생성
         from agent_framework.azure import AzureOpenAIChatClient
         
@@ -99,6 +103,10 @@ def initialize_session_state():
     
     if "pending_query" not in st.session_state:
         st.session_state.pending_query = None
+    
+    if "use_mock_search" not in st.session_state:
+        # USE_MOCK_SEARCH 환경변수 읽기
+        st.session_state.use_mock_search = os.getenv("USE_MOCK_SEARCH", "true").lower() == "true"
 
 
 # ============================================================================
@@ -109,6 +117,17 @@ def render_sidebar():
     """사이드바 렌더링."""
     with st.sidebar:
         st.title("🧪 화장품 R&D Assistant")
+        st.markdown("---")
+        
+        # 데이터 소스 정보 표시
+        st.markdown("### 📊 데이터 소스")
+        if st.session_state.use_mock_search:
+            st.info("🧪 **Mock 데이터** 사용 중")
+            st.caption("📁 `data/cosmetic_raw_materials.json`")
+        else:
+            st.success("☁️ **Azure AI Search** 연결됨")
+            st.caption("🔗 실제 검색 엔진 사용 중")
+        
         st.markdown("---")
         
         # 새 대화 버튼
